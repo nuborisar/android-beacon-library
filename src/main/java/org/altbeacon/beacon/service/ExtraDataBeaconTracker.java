@@ -77,9 +77,9 @@ public class ExtraDataBeaconTracker {
 
     private String getBeaconKey(Beacon beacon) {
         if (matchBeaconsByServiceUUID) {
-            return beacon.getBluetoothAddress() + beacon.getServiceUuid();
+            return beacon.getBluetoothName() + beacon.getServiceUuid();
         } else {
-            return beacon.getBluetoothAddress();
+            return beacon.getBluetoothName();
         }
     }
 }

@@ -22,12 +22,14 @@ public class ExtraDataBeaconTrackerTest {
     Beacon getManufacturerBeacon() {
         return new Beacon.Builder().setId1("1")
                 .setBluetoothAddress("01:02:03:04:05:06")
+                .setBluetoothName("asv")
                 .build();
     }
 
     Beacon getGattBeacon() {
         return new Beacon.Builder().setId1("1")
                 .setBluetoothAddress("01:02:03:04:05:06")
+                .setBluetoothName("asv")
                 .setServiceUuid(1234)
                 .build();
     }
@@ -36,6 +38,7 @@ public class ExtraDataBeaconTrackerTest {
         return new Beacon.Builder().setId1("1")
                 .setBluetoothAddress("01:02:03:04:05:06")
                 .setServiceUuid(1234)
+                .setBluetoothName("asv")
                 .setRssi(-50)
                 .setDataFields(getDataFields())
                 .build();
@@ -58,6 +61,7 @@ public class ExtraDataBeaconTrackerTest {
     Beacon getGattBeaconExtraData() {
         return new Beacon.Builder()
                 .setBluetoothAddress("01:02:03:04:05:06")
+                .setBluetoothName("asv")
                 .setServiceUuid(1234)
                 .setDataFields(getDataFields())
                 .build();
@@ -66,6 +70,7 @@ public class ExtraDataBeaconTrackerTest {
     Beacon getGattBeaconExtraData2() {
         return new Beacon.Builder()
                 .setBluetoothAddress("01:02:03:04:05:06")
+                .setBluetoothName("asv")
                 .setServiceUuid(1234)
                 .setDataFields(getDataFields2())
                 .build();
@@ -74,6 +79,7 @@ public class ExtraDataBeaconTrackerTest {
     Beacon getMultiFrameBeacon() {
         return new Beacon.Builder().setId1("1")
                 .setBluetoothAddress("01:02:03:04:05:06")
+                .setBluetoothName("asv")
                 .setServiceUuid(1234)
                 .setMultiFrameBeacon(true)
                 .build();
@@ -82,6 +88,7 @@ public class ExtraDataBeaconTrackerTest {
     Beacon getMultiFrameBeaconUpdateDifferentServiceUUID() {
         return new Beacon.Builder()
                 .setBluetoothAddress("01:02:03:04:05:06")
+                .setBluetoothName("asv")
                 .setServiceUuid(5678)
                 .setRssi(-50)
                 .setDataFields(getDataFields())
