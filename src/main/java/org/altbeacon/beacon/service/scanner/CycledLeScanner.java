@@ -266,7 +266,7 @@ public abstract class CycledLeScanner {
             if (getBluetoothAdapter() != null) {
                 if (getBluetoothAdapter().isEnabled()) {
                     long now = System.currentTimeMillis();
-                    if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.N &&
+                    if (android.os.Build.VERSION.SDK_INT >= 24 &&
                             mBetweenScanPeriod+mScanPeriod < ANDROID_N_MIN_SCAN_CYCLE_MILLIS &&
                             now-mLastScanStopTime < ANDROID_N_MIN_SCAN_CYCLE_MILLIS) {
                         // As of Android N, only 5 scans may be started in a 30 second period (6
